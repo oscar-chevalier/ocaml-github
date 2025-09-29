@@ -535,7 +535,9 @@ type new_pull = {
   ?body: string option;
   base: string;
   head: string;
-  draft: bool;
+  ~head_repo: string;
+  ~draft: bool;
+  ~maintainer_can_modify <ocaml default="true">: bool;
 } <ocaml field_prefix="new_pull_">
 
 type new_pull_issue = {
