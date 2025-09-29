@@ -535,6 +535,7 @@ type new_pull = {
   ?body: string option;
   base: string;
   head: string;
+  draft: bool;
 } <ocaml field_prefix="new_pull_">
 
 type new_pull_issue = {
